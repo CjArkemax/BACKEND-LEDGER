@@ -1,5 +1,9 @@
-const app = require("./src/app")
+require("dotenv").config()
 
+const app = require("./src/app")
+const connectToDB = require("./src/config/db")
+
+connectToDB();
 
 PORT = 3000
 app.listen(PORT,()=>{
